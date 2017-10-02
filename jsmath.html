@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function zero_negativity(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        let test1 = zero_negativity([2, 2, 4, 6])
+        console.log(test1)
+        let test2 = zero_negativity([-5, 0, 4, 5])
+        console.log(test2)
+
+        function is_even(number) {
+            if (number % 2 === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        let test3 = is_even(10)
+        console.log(test3)
+        let test4 = is_even(15)
+        console.log(test4)
+
+        function how_many_even(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (is_even(arr[i])) {
+                    sum += 1;
+                }
+            }
+            return sum;
+        }
+        let test5 = how_many_even([2, 4, 5, 7, 8, 9])
+        console.log(test5)
+
+        function create_dummy_array(number) {
+            const arr = [];
+            for (let i = 0; i < number; i++) {
+                arr.push(Math.floor(Math.random() * 10));
+            }
+            return arr;
+        }
+        let test6 = how_many_even([5, 7, 9])
+        console.log(test6)
+
+        function random_choice(arr) {
+            let i = Math.floor(Math.random() * arr.length);
+            return arr[i];
+        }
+        let test7 = random_choice([2, 4, 5, 7])
+        console.log(test7)
+    </script>
+
+</body>
+
+</html>
