@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let students = [{
+            name: 'Remy',
+            cohort: 'Jan'
+        }, {
+            name: 'Genevieve',
+            cohort: 'March'
+        }, {
+            name: 'Chuck',
+            cohort: 'Jan'
+        }, {
+            name: 'Osmund',
+            cohort: 'June'
+        }, {
+            name: 'Nikki',
+            cohort: 'June'
+        }, {
+            name: 'Boris',
+            cohort: 'June'
+        }];
+        for (let student of students) {
+            console.log(`name: ${student.name}, cohort: ${student.cohort}`)
+        };
+
+        let users = {
+            employees: [{
+                'first_name': 'Miguel',
+                'last_name': 'Jones'
+            }, {
+                'first_name': 'Ernie',
+                'last_name': 'Bertson'
+            }, {
+                'first_name': 'Nora',
+                'last_name': 'Lu'
+            }, {
+                'first_name': 'Sally',
+                'last_name': 'Barkyoumb'
+            }],
+            managers: [{
+                'first_name': 'Lillian',
+                'last_name': 'Chambers'
+            }, {
+                'first_name': 'Gordon',
+                'last_name': 'Poe'
+            }]
+        };
+        for (let name in users) {
+            console.log(name.toUpperCase());
+            for (let i = 0; i < users[name].length; i++) {
+                let num = i + 1;
+                let firstName = users[name][i].first_name;
+                let lastName = users[name][i].last_name;
+                let length = firstName.length + lastName.length;
+                console.log(`${num} - ${lastName}, ${firstName} - ${length}`);
+            }
+        };
+    </script>
+
+</body>
+
+</html>
