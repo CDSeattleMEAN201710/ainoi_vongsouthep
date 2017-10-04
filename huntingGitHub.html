@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button type="button">Click Me!</button>
+    <h3>Hello my username is:</h3>
+    <script>
+        $(document).ready(
+            function() {
+                $('button').click(function() {
+                    $.get('https://api.github.com/users/ainoiv', displayName);
+                });
+
+                function displayName(data) {
+                    let name = data.login;
+                    console.log(name);
+                    $('h3').html(name);
+                };
+            });
+    </script>
+
+</body>
+
+</html>
