@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web Page</title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <h1>The Dojo Meassage Board</h1>
+        <form action="/create" method="post">
+            <h3>Name:</h3>
+            <input type="text" name="name" placeholder="Enter your name here"><br>
+            <h3>Message:</h3>
+            <textarea name="message" placeholder="Enter message here"></textarea>
+            <input type="submit" value="Post message"><br>
+        </form>
+    </div>
+    <div>
+        <% for(var i=0; i < messages.length; i++) { %>
+            <h3>Name:
+                <%= messages[i].name %>
+            </h3>
+            <h3>Message:
+                <%= messages[i].message %>
+            </h3>
+            <p>
+                <% for(var x = 0; x < messages[i].comments.length; x++) { %>
+            </p>
+            <p>
+                Name:
+                <%= messages[i].comments[x].name %>
+            </p>
+            Comment:
+            <%= messages[i].comments[x].comment %>
+                <%}%>
+
+    </div>
+    <div>
+        <form action="/comment_post/<%= messages[i]._id %>" method="post">
+            <h3>Name:</h3>
+            <input type="text" name="name" placeholder="Enter your name here"><br>
+            <h3>Comment:</h3>
+            <textarea name="comment" placeholder="Enter comment here"></textarea>
+            <input type="submit" value="Post comment"><br>
+        </form>
+
+    </div>
+    <% } %>
+
+</body>
+
+</html>
