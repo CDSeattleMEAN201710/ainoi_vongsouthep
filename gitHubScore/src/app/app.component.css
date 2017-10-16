@@ -1,0 +1,49 @@
+* {
+    outline: 1px solid blue;
+}
+
+div.container {
+    width: 810px;
+    margin: 0 auto;
+}
+
+section {
+    vertical-align: top;
+    width: 400px;
+    display: inline-block;
+}
+
+section.username input {
+    margin-left: 20px;
+    width: 230px;
+}
+
+section.username button {
+    margin: 10px 0px 10px 0;
+    width: 380px;
+}
+
+section.display {
+    vertical-align: top;
+    text-align: center;
+}
+
+section.display div {
+    padding: 20px;
+}
+
+.red {
+    color: red
+}
+
+.orange {
+    color: orange
+}
+
+.green {
+    color: green
+}
+
+.blue {
+    color: blue
+}
