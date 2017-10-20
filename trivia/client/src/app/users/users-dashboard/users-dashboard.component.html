@@ -1,0 +1,25 @@
+<h3>Dashboard</h3>
+<div>
+    <ul>
+        <li><a [routerLink]="['/dashboard']">Home</a></li>
+        <li><a [routerLink]="['/add']">Add a Question</a></li>
+        <li><a href="/logout">Log Out</a></li>
+    </ul>
+
+</div>
+<div id="play">
+    <input type="submit" value="Play!">
+    <p>Click the button above to start the trivia game.</p>
+</div>
+
+<table>
+    <tr>
+        <th>Name:</th>
+        <th>Score:</th>
+        <th>Percentage:</th>
+
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+    </tr>
+</table>

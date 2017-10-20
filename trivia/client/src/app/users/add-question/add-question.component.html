@@ -1,0 +1,25 @@
+<div>
+    <ul>
+        <li><a [routerLink]="['/dashboard']">Home</a></li>
+        <li><a [routerLink]="['/add']">Add a Question</a></li>
+    </ul>
+</div>
+<div>
+    <h2>New Question</h2>
+</div>
+
+<div>
+    <form (submit)="add_question()">
+        <h4>Question</h4>
+        <input type="textarea" name="question" required minlength="15" placeholder="Enter question here">
+        <h4>Correct Answer:</h4>
+        <input type="textarea" name="answer" required minlength="0" placeholder="Enter answer here">
+        <h4>Fake Answer 1:</h4>
+        <input type="textarea" name="fake1" required minlength="0" placeholder="Enter fake answer here">
+        <h4>Fake Answer 2:</h4>
+        <input type="textarea" name="fake2" required minlength="0" placeholder="Enter fake answer here">
+        <p><input type="submit" value="Cancel">
+            <input type="submit" value="Add Question"></p>
+
+    </form>
+</div>
